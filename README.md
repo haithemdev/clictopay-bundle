@@ -1,5 +1,9 @@
 # ClicToPay Symfony Bundle
 
+[![Tests](https://github.com/haithemdev/clictopay-bundle/actions/workflows/tests.yml/badge.svg)](https://github.com/haithemdev/clictopay-bundle/actions)
+[![Latest Stable Version](https://img.shields.io/packagist/v/haithemdev/clictopay-bundle.svg)](https://packagist.org/packages/haithemdev/clictopay-bundle)
+[![License](https://img.shields.io/github/license/haithemdev/clictopay-bundle.svg)](https://github.com/haithemdev/clictopay-bundle/blob/main/LICENSE)
+
 A reusable Symfony bundle for integrating the **ClicToPay (SMT Tunisia)** payment gateway.
 
 ## Features
