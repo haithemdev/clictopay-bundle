@@ -4,24 +4,19 @@ A reusable Symfony bundle for integrating the **ClicToPay (SMT Tunisia)** paymen
 
 ## Features
 
-- **Direct API Integration**: Handles `register.do` and `getOrderStatus.do`.
-- **Event-Driven Architecture**: Like modern Symfony bundles, it dispatches events for clean code decoupling (`ClicToPayEvents::PAYMENT_VERIFIED`).
-- **Multi-Account / Multi-Tenant**: Supports having different API keys for different clients dynamically.
-- **Built-in Webhook Controller**: Ready-to-use webhook route to verify payments.
-- **TND Decimal Support**: Automatically converts amounts to millimes (subunits).
+- ✅ **Direct API Integration**: Handles `register.do` and `getOrderStatus.do`.
+- ✅ **Event-Driven Architecture**: Like modern Symfony bundles, it dispatches events for clean code decoupling (`ClicToPayEvents::PAYMENT_VERIFIED`).
+- ✅ **Multi-Account / Multi-Tenant**: Supports having different API keys for different clients dynamically.
+- ✅ **Built-in Webhook Controller**: Ready-to-use webhook route to verify payments.
+- ✅ **TND Decimal Support**: Automatically converts amounts to millimes (subunits).
 
 ## Installation
 
-Add the bundle to your `composer.json` (or use a local path repository if it's not on Packagist yet).
-
-Then, register the bundle in `config/bundles.php`:
-
-```php
-return [
-    // ...
-    Hdev\ClicToPayBundle\ClicToPayBundle::class => ['all' => true],
-];
+```bash
+composer require haithemdev/clictopay-bundle
 ```
+
+*(Note: Once published on Packagist. Until then, use a local path repository).*
 
 ## Configuration
 
@@ -116,6 +111,14 @@ https://your-app.com/clictopay/webhook/default
 ```
 
 
-## Credits
+## Testing
 
-Created by **hdev**. Based on the PrestaShop module for ClicToPay SMT.
+```bash
+vendor/bin/phpunit
+```
+
+## License
+MIT
+
+## About
+Ready-to-use Symfony Bundle for ClicToPay (SMT Tunisia) Payment Gateway. Optimized for multi-account and client-specific integrations with event-driven architecture.
