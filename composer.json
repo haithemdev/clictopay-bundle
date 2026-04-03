@@ -1,5 +1,5 @@
 {
-    "name": "hdev/clictopay-bundle",
+    "name": "haithemdev/clictopay-bundle",
     "description": "Ready-to-use Symfony Bundle for ClicToPay (SMT Tunisia) Payment Gateway. Supports multi-account, event-driven architecture, and built-in webhook handling.",
     "keywords": ["clictopay", "smt", "payment", "gateway", "tunisia", "symfony", "bundle"],
     "type": "symfony-bundle",
