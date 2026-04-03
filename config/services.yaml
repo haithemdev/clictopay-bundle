@@ -1,0 +1,20 @@
+services:
+    # Factory – always registered
+    Hdev\ClicToPayBundle\Service\ClicToPayServiceFactory:
+        arguments:
+            $httpClient: '@http_client'
+            $eventDispatcher: '@event_dispatcher'
+
+    # Manager – accounts are added dynamically by the Extension
+    Hdev\ClicToPayBundle\Service\ClicToPayManager:
+        arguments:
+            $factory: '@Hdev\ClicToPayBundle\Service\ClicToPayServiceFactory'
+            $defaultAccount: 'default'
+        public: true
+
+    # Webhook controller
+    Hdev\ClicToPayBundle\Controller\ClicToPayWebhookController:
+        arguments:
+            $manager: '@Hdev\ClicToPayBundle\Service\ClicToPayManager'
+        tags: ['controller.service_arguments']
+        public: true
